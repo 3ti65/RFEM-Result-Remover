@@ -84,8 +84,14 @@ namespace RFEM
                 int fileCount = fileNames.Length;
 
                 Console.WriteLine();
-                Console.WriteLine($"[ {fileCount} files found. Press any key to start the conversion... ]");
-                Console.ReadKey();
+                Console.WriteLine($"[ {fileCount} files found. Are you sure you want to start the conversion? Type 'start' to execute. ]");
+
+                string response;
+                do
+                {
+                    response = Console.ReadLine();
+                } while (response != "start");
+
                 Console.WriteLine($"[ Program started. Converting files... ]");
                 Console.CursorVisible = false;
                 int index = 0;
