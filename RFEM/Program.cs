@@ -72,7 +72,7 @@ namespace RFEM
 
                 while (!fileNames.Any())
                 {
-                    fileNames = Directory.GetFiles(path, "*.rf5");
+                    fileNames = Directory.GetFiles(path, "*.rf5", SearchOption.AllDirectories);
 
                     if (fileNames.Any())
                         break;

@@ -7,11 +7,12 @@
     <FileVersion>0.1.0.0</FileVersion>
     <PackageIcon></PackageIcon>
     <PackageIconUrl />
+    <ApplicationIcon />
+    <StartupObject>RFEM.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="OpenMcdf" Version="2.2.1.4" />
-    <PackageReference Include="System.Threading" Version="4.3.0" />
   </ItemGroup>
 
 </Project>
