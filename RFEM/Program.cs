@@ -13,7 +13,6 @@ namespace RFEM
     {
         private static readonly object Padlock = new object();
         private static readonly List<Exception> Exceptions = new List<Exception>();
-        private static readonly List<NonDeletableObject> NonDeletableObjects = new List<NonDeletableObject>(); // container entries that couldnt be deleted
         private static readonly Stopwatch StopWatch = new Stopwatch();
         private static string[] _fileNames = { }; // backups deleted file count
         private static int _index; // processed file count
@@ -29,12 +28,6 @@ namespace RFEM
             {
                 get { return Children.Any(); }
             }
-        }
-
-        private class NonDeletableObject
-        {
-            public string Path { get; set; }
-            public string FileName { get; set; }
         }
 
         public static void Main(string[] args)
