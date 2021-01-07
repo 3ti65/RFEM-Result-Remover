@@ -120,10 +120,10 @@ namespace RFEM
             {
                 try
                 {
-                    RemoveObsoleteObjectsFromFile(fileName);
-
                     if (RemoveIndividualBackup(fileName))
                         Interlocked.Increment(ref _backupDeleteCount);
+
+                    RemoveObsoleteObjectsFromFile(fileName);
                 }
                 catch (Exception ex)
                 {
